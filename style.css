@@ -1,0 +1,86 @@
+
+/* Resetting all the Margins */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#nav-bar ul{
+  /* To Remove the bullets */
+  list-style: none;
+}
+#nav-bar ul li a{
+  /* Remove the underline of {a} links &  color */
+  text-decoration: none;
+  color: black;
+}
+/* Display block data as inline not to go to next line  */
+#nav-bar ul li{
+  display: inline-block;
+  padding: 1rem;
+  position: relative;
+}
+/* Hide the data which by Default is not visible */
+#nav-bar ul li ul{
+  display: none;
+}
+#nav-bar ul li:hover{
+  color: white;
+  cursor: pointer;
+  background: coral;
+}
+#nav-bar ul li a:hover{
+  color: white;
+}
+
+/* Drop Down on Hover State */
+#nav-bar ul li:hover ul{
+  /* Block means you have to show the whole block of that unordered list */
+  display: block;
+
+  position: absolute;
+  left: 0;
+  width: 200px;
+  margin-top: 1rem;
+}
+#nav-bar ul li:hover ul li{
+  display: block;
+  background: darkgray;
+}
+#nav-bar ul li:hover ul li a{
+   color: black;
+}
+#nav-bar ul li:hover ul li:hover{
+  background: lavender;
+  color: white;
+}
+#nav-bar ul li:hover ul li span{
+  float: right;
+  background: coral;
+  padding: .2rem .5rem;
+  border-radius: 5px;
+  text-align: center;
+  font-size: .8rem;
+}
+/* Center the Footer Content */
+#footer-content{
+  background: chocolate;
+  color: #efefef;
+  padding: 50px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Some Kind of responsiveness */
+/* the below fired as the max-width is less than 600px */
+@media(max-width:600px){
+#nav-bar ul li{
+  display: block;
+}
+#nav-bar ul li:hover ul{
+  position: relative;
+}
+}
